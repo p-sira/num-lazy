@@ -15,7 +15,7 @@
 
 <p align="center">
     <a href="https://github.com/p-sira/num-lazy/">
-        <img src="https://github.com/p-sira/num-lazy/blob/main/images/num-lazy.png?raw=true" alt="num-lazy demo">
+        <img src="https://github.com/p-sira/num-lazy/blob/main/images/num-lazy.png?raw=true" alt="num-lazy demo" width=400>
     </a>
 </p>
 
