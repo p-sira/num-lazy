@@ -3,7 +3,7 @@
  * Copyright 2025 Sira Pornsiriprasert <code@psira.me>
  */
 
-/*! **Num-lazy** helps you write numbers for generic-typed functions. 
+/*! **num-lazy** helps you write numbers for generic-typed functions. 
 ```
 use num_lazy::declare_nums;
 use num_traits::Float;
