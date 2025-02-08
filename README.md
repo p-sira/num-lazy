@@ -1,4 +1,4 @@
-# Num-lazy
+# num-lazy
 <p>
     <a href="https://opensource.org/license/BSD-3-clause">
         <img src="https://img.shields.io/badge/License-BSD--3--Clause-brightgreen.svg" alt="License">
@@ -11,7 +11,7 @@
     </a>
 </p>
 
-**Num-lazy** helps you write numbers for generic-typed functions, reduce typing, and improve readability!
+**num-lazy** helps you write numbers for generic-typed functions, reduce typing, and improve readability!
 
 <p align="center">
     <a href="https://github.com/p-sira/num-lazy/">
