@@ -1,0 +1,21 @@
+[package]
+name = "num-lazy"
+version = "0.1.0"
+authors = ["Sira Pornsiriprasert <code@psira.me>"]
+
+description = "Number macros for generic-typed functions."
+categories = ["mathematics", "science"]
+keywords = ["mathematics", "numerics", "generic", "macro"]
+documentation = "https://docs.rs/num-lazy"
+homepage = "https://github.com/p-sira/num-lazy"
+repository = "https://github.com/p-sira/num-lazy"
+readme = "README.md"
+license = "BSD-3-Clause"
+edition = "2021"
+
+exclude = ["/images"]
+
+[dependencies]
+
+[dev-dependencies]
+num-traits = "0.2.19"
