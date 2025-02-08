@@ -3,7 +3,7 @@
  * Copyright 2025 Sira Pornsiriprasert <code@psira.me>
  */
 
-/*! **num-lazy** helps you write numbers for generic-typed functions. 
+/*! **num-lazy** helps you write numbers for generic-typed functions.
 ```
 use num_lazy::declare_nums;
 use num_traits::Float;
@@ -102,7 +102,7 @@ pub fn circle_area<T: Float>(radius: T) -> T {
 ///     - Min/max type representation value: `min_val!()`, `max_val!()`, and `min_positive!()`
 ///     - Machine epsilon: `epsilon!()`
 ///     - Negative zero: `neg_zero!()`
-/// 
+///
 #[macro_export]
 macro_rules! declare_nums {
     ($t: ident) => {
@@ -116,15 +116,15 @@ macro_rules! declare_nums {
         }
 
         /// Declare new macro for a number. Meant to be used internally in num-lazy.
-        /// 
+        ///
         /// `_declare!{@literal fourty_two, 42.0, "The universe constant `42`"}`
-        /// 
+        ///
         /// `_declare!{@constant pi, PI, "π = `3.141592653589793`"}`
-        /// 
+        ///
         /// `_declare!{@special inf, infinity, "Infinity (`∞`)"}`
-        /// 
+        ///
         // It is documented this way to prevent doctest from compiling in the users' test.
-        // Using `ignore` will still show that the test is ignored, which can be annoying. 
+        // Using `ignore` will still show that the test is ignored, which can be annoying.
         macro_rules! _declare {
             ($name:ident, $value: expr, $doc: expr) => {
                 #[allow(unused_macros)]

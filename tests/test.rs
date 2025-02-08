@@ -7,7 +7,7 @@ use std::fmt::Display;
 
 use num_lazy::declare_nums;
 use num_traits::{Float, PrimInt};
-declare_nums!{T}
+declare_nums! {T}
 
 #[test]
 fn test_num() {
@@ -21,7 +21,7 @@ fn test_num() {
 
     float_function::<f64>();
     float_function::<f32>();
-    
+
     int_function::<i32>();
     int_function::<i64>();
 }

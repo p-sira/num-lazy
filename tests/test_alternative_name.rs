@@ -6,7 +6,7 @@
 use num_lazy::declare_nums;
 use num_traits::Float;
 
-declare_nums!{F}
+declare_nums! {F}
 
 #[test]
 fn test_alternative_name() {
