@@ -14,10 +14,10 @@ declare_nums!{T}
 fn circumference<T: Float>(radius: T) -> T {
     two!() * pi!() * radius
 }
-
-fn main() {
-    assert!(circumference(1.0_f64) == 6.283185307179586);
-}
+#
+# fn main() {
+#     assert!(circumference(1.0_f64) == 6.283185307179586);
+# }
 ```
 
 See what numbers are declared in [declare_nums].
@@ -68,7 +68,7 @@ pub fn circle_area<T: Float>(radius: T) -> T {
 /// ```
 /// use num_lazy::declare_nums;
 /// use num_traits::Float;
-/// // Assign to generic type T
+/// // Assign to generic type T.
 /// // Important. Use the braces!
 /// declare_nums!{T}
 ///
@@ -84,6 +84,8 @@ pub fn circle_area<T: Float>(radius: T) -> T {
 /// ```
 ///
 /// This macro will populate the module with:
+/// - `num!($n)`: equivalent to `$t::from($n).unwrap()`, where `$t` is the generic type identifier you
+///    declared, and `$n` is any expression evaluated to a number.
 /// - **Literals**
 ///     - `zero!()` to `ten!()`
 ///     - `hundred!()`, `thousand!()`, and `million!()`
@@ -102,13 +104,18 @@ pub fn circle_area<T: Float>(radius: T) -> T {
 ///     - Min/max type representation value: `min_val!()`, `max_val!()`, and `min_positive!()`
 ///     - Machine epsilon: `epsilon!()`
 ///     - Negative zero: `neg_zero!()`
-///
+/// - **Others**
+///     - `_declare`: An internal function for declaring new numbers.
+///         - `_declare!{@literal fourty_two, 42.0, "The universe constant `42`"}`
+///         - `_declare!{@constant pi, PI, "π = `3.141592653589793`"}`
+///         - `_declare!{@special inf, infinity, "Infinity (`∞`)"}`
 #[macro_export]
 macro_rules! declare_nums {
     ($t: ident) => {
         /// Unwrap the expression into the specified generic type.
         ///
-        /// Equivalent to `T::from($n).unwrap()`
+        /// Equivalent to `$t::from($n).unwrap()`, where `$t` is the generic type identifier you
+        /// declared, and `$n` is any expression evaluated to a number.
         macro_rules! num {
             ($n: expr) => {
                 $t::from($n).unwrap()
