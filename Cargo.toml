@@ -1,6 +1,6 @@
 [package]
 name = "num-lazy"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Sira Pornsiriprasert <code@psira.me>"]
 
 description = "Number macros for generic-typed functions."
@@ -12,8 +12,6 @@ repository = "https://github.com/p-sira/num-lazy"
 readme = "README.md"
 license = "BSD-3-Clause"
 edition = "2021"
-
-exclude = ["/images"]
 
 [dependencies]
 
