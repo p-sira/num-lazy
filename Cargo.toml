@@ -1,6 +1,6 @@
 [package]
 name = "num-lazy"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Sira Pornsiriprasert <code@psira.me>"]
 
 description = "Number macros for generic-typed functions."

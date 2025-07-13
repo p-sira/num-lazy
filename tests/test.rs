@@ -7,6 +7,7 @@ use std::fmt::Display;
 
 use num_lazy::declare_nums;
 use num_traits::{Float, PrimInt};
+
 declare_nums! {T}
 
 #[test]
