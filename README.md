@@ -48,3 +48,21 @@ fn main() {
     assert!(circumference(1.0_f64) == 6.283185307179586);
 }
 ```
+
+## Recommendation
+It is recommended to use num-lazy along with [numeric-literals](https://crates.io/crates/numeric_literals) by
+using num-lazy to access macros for **constants** and **special values**, while using numeric_literals for parsing
+floats or numeric literals.
+```rust
+use num_lazy::declare_nums;
+use numeric_literals::replace_numeric_literals;
+use num_traits::Float;
+
+declare_nums!{@constant T}
+declare_nums!{@special T}
+
+#[replace_numeric_literals(T::from(literal).unwrap())]
+fn circumference<T: Float>(radius: T) -> T {
+    2 * pi!() * radius
+}
+```
