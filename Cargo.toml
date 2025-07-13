@@ -17,3 +17,4 @@ edition = "2021"
 
 [dev-dependencies]
 num-traits = "0.2.19"
+numeric_literals = "0.2.0"

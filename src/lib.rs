@@ -4,15 +4,25 @@
  */
 
 /*! **num-lazy** helps you write numbers for generic-typed functions.
+
+It is recommended to use `num-lazy` along with [numeric-literals](https://crates.io/crates/numeric_literals).
+Use num-lazy to access macros for constants and special values, while using `numeric_literals` for parsing
+floats or numeric literals.
 ```
 use num_lazy::declare_nums;
+use numeric_literals::replace_numeric_literals;
 use num_traits::Float;
-// Assign to generic type T.
-// Important. Use the braces!
-declare_nums!{T}
 
+declare_nums!{@constant T}
+declare_nums!{@special T}
+// declare_nums!{@literal T} // Use `numeric_literals` instead
+
+// Or use this to declare all macros:
+// declare_nums!{T}
+
+#[replace_numeric_literals(T::from(literal).unwrap())]
 fn circumference<T: Float>(radius: T) -> T {
-    two!() * pi!() * radius
+    2 * pi!() * radius
 }
 #
 # fn main() {
