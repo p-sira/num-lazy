@@ -15,7 +15,7 @@ use num_traits::Float;
 
 declare_nums!{@constant T}
 declare_nums!{@special T}
-// declare_nums!{@literal T} // Use `numeric_literals` instead
+// declare_nums!{@literal T} // Recommend using `numeric_literals` instead
 
 // Or use this to declare all macros:
 // declare_nums!{T}
