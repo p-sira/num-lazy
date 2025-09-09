@@ -183,7 +183,7 @@ macro_rules! declare_nums {
                 #[doc=$doc]
                 macro_rules! $name {
                     () => {
-                        $t::from(std::f64::consts::$constant).unwrap()
+                        $t::from(core::f64::consts::$constant).unwrap()
                     };
                 }
             };
