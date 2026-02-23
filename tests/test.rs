@@ -3,8 +3,6 @@
  * Copyright 2025 Sira Pornsiriprasert <code@psira.me>
  */
 
-use std::fmt::Display;
-
 use num_lazy::declare_nums;
 use num_traits::{Float, PrimInt};
 
@@ -29,12 +27,12 @@ fn test_num() {
 
 #[test]
 fn test_consts() {
-    fn float_function<T: Float + Display>() {
+    fn float_function<T: Float>() {
         assert!(zero!() == T::zero());
         assert!(one!() == T::one());
         assert!(two!() == T::from(2.0).unwrap());
         assert!(half!() * pi!() == pi_2!());
-        assert!(e!() == T::from(std::f64::consts::E).unwrap());
+        assert!(e!() == T::from(core::f64::consts::E).unwrap());
     }
     float_function::<f64>();
     float_function::<f32>();
