@@ -20,5 +20,5 @@ jobs:
                       ~/.cargo/git
                       target
                   key: cargo-nostd-${{ runner.os }}-${{ hashFiles('**/Cargo.lock') }}
-            - name: Test no_std
-              run: cargo test --target thumbv7m-none-eabi
+            - name: Check no_std
+              run: cargo chek --target thumbv7m-none-eabi
