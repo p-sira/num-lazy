@@ -1,10 +1,10 @@
 [package]
 name = "num-lazy"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["Sira Pornsiriprasert <code@psira.me>"]
 
 description = "Number macros for generic-typed functions."
-categories = ["mathematics", "science"]
+categories = ["mathematics", "science", "no-std"]
 keywords = ["mathematics", "numerics", "generic", "macro"]
 documentation = "https://docs.rs/num-lazy"
 homepage = "https://github.com/p-sira/num-lazy"

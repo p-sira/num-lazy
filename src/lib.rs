@@ -3,6 +3,8 @@
  * Copyright 2025 Sira Pornsiriprasert <code@psira.me>
  */
 
+#![no_std]
+
 /*! **num-lazy** helps you write numbers for generic-typed functions.
 
 It is recommended to use `num-lazy` along with [numeric-literals](https://crates.io/crates/numeric_literals).
