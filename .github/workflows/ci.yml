@@ -6,7 +6,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    test:
+    check-no-std:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -21,4 +21,4 @@ jobs:
                       target
                   key: cargo-nostd-${{ runner.os }}-${{ hashFiles('**/Cargo.lock') }}
             - name: Check no_std
-              run: cargo chek --target thumbv7m-none-eabi
+              run: cargo check --target thumbv7m-none-eabi
