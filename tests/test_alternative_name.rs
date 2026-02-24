@@ -3,8 +3,6 @@
  * Copyright 2025 Sira Pornsiriprasert <code@psira.me>
  */
 
-#![no_std]
-
 use num_lazy::declare_nums;
 use num_traits::Float;
 
