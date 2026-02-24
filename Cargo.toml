@@ -13,9 +13,6 @@ readme = "README.md"
 license = "BSD-3-Clause"
 edition = "2021"
 
-[dependencies]
-num-traits = { version = "0.2.19", default-features = false }
-
 [dev-dependencies]
-num-traits = "0.2.19"
+num-traits = { version = "0.2.19", default-features = false, features = ["libm"] }
 numeric_literals = "0.2.0"
